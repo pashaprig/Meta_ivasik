@@ -1,6 +1,16 @@
 /* Fonts */
-
 // Montserrat
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local("Montserrat Light"),
+    url("../fonts/montserrat/Montserrat-Light300.woff2") format("woff2"),
+    url("../fonts/montserrat/Montserrat-Light300.woff") format("woff"),
+    url("../fonts/montserrat/Montserrat-Light300.ttf") format("truetype");
+}
 
 @font-face {
   font-family: "Montserrat";
@@ -16,23 +26,21 @@
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-display: swap;
-  src: local("Montserrat Medium"),
-    url("../fonts/montserrat/Montserrat-Medium500.woff2") format("woff2"),
-    url("../fonts/montserrat/Montserrat-Medium500.woff") format("woff"),
-    url("../fonts/montserrat/Montserrat-Medium500.ttf") format("truetype");
+  src: local("Montserrat Bold"),
+    url("../fonts/montserrat/Montserrat-Bold700.woff2") format("woff2"),
+    url("../fonts/montserrat/Montserrat-Bold700.woff") format("woff"),
+    url("../fonts/montserrat/Montserrat-Bold700.ttf") format("truetype");
 }
 
-// Inter
-
 @font-face {
-  font-family: "Inter";
+  font-family: "Montserrat";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-display: swap;
-  src: local("Inter Regular"),
-    url("../fonts/inter/Inter-Regular.woff2") format("woff2"),
-    url("../fonts/inter/Inter-Regular.woff") format("woff"),
-    url("../fonts/inter/Inter-Regular.ttf") format("truetype");
+  src: local("Montserrat ExtraBold"),
+    url("../fonts/montserrat/Montserrat-ExtraBold800.woff2") format("woff2"),
+    url("../fonts/montserrat/Montserrat-ExtraBold800.woff") format("woff"),
+    url("../fonts/montserrat/Montserrat-ExtraBold800.ttf") format("truetype");
 }
