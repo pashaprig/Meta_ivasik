@@ -27,19 +27,45 @@
   </iframe> -->
   <main>
     <section class="conversation">
-      <video class="conversation__video" aria-video="1" src="video/1.mp4" preload="auto" muted poster="img/img/operator.png"></video>
+      <video class="conversation__video" aria-video="video-1" src="video/1sec.mp4" preload="auto" muted
+        poster="img/img/operator.png"></video>
     </section>
     <section class="modal" aria-modal="loader">
       <h2 class="modal__header">Соединение с оператором Компании Meta</h2>
       <img class="modal__loader" src="img/gif/loader.gif" height="150" alt="Meta loader">
       <button class="btn visually-hidden" aria-sound="on" type="button">Начать чат</button>
     </section>
-    <section class="modal modal--form visually-hidden" aria-modal="modal2">
-      <h2 class="modal__header">Пожалуйста, введите свое полное имя</h2>
-      <button class="btn " aria-next="next" type="button">Подтвердить</button>
+    <section class="modal modal--form visually-hidden" aria-modal="form">
+      <form action="<?= $form; ?>" class="form" method="POST" id="leadform1">
+        <h2 class="form__heading">Пожалуйста, введите свое полное имя</h2>
+        <div class="form__wrapper">
+          <label class="visually-hidden" aria-input="firstname">
+            Ваше имя
+            <input type="text" name="firstname">
+          </label>
+          <label class="visually-hidden" aria-input="lastname">
+            Ваша фамилия
+            <input type="text" name="lastname">
+          </label>
+          <input class="visually-hidden" type="email" name="email" aria-input="email">
+          <input class="visually-hidden" type="tel" name="phone1" id="phone1" placeholder="">
+          <input type="hidden" name="phone" id="realPhone1">
+          <input type="hidden" name="currency" value="usd">
+          <input type="hidden" name="country" id="country1" value="ru">
+          <input type="hidden" name="comment" class="comment">
+          <input type="hidden" name="campaign_name">
+          <input type="hidden" name="name" id="name">
+          <div class="form_message error inactive"></div>
+        </div>
+        <button class="btn submit_btn" type="button">Подтвердить</button>
+      </form>
     </section>
   </main>
+  <script src="js/jquery.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/intlTelInput.min.js"></script>
+  <script src="js/jquery.validate.js"></script>
+  <script src="js/jquery.maskedinput.js"></script>
 </body>
 
 </html>
