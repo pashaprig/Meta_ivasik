@@ -1,0 +1,33 @@
+.modal {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 100px 30px;
+  background: $basic-white;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+
+  &.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+  }
+}
+
+.modal__header {
+  text-align: center;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.modal__loader {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+}

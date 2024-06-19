@@ -58,11 +58,12 @@ exports.scripts = scripts;
 // Images
 
 const optimizeImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src("source/img/**/*.{png,jpg,svg,gif}")
     .pipe(imagemin([
       imagemin.mozjpeg({ progressive: true }),
       imagemin.optipng({ optimizationLevel: 3 }),
-      imagemin.svgo()
+      imagemin.svgo(),
+      gifsicle({interlaced: true})
     ]))
     .pipe(gulp.dest("build/img"))
 }
@@ -70,7 +71,7 @@ const optimizeImages = () => {
 exports.optimizeImages = optimizeImages;
 
 const copyImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src("source/img/**/*.{png,jpg,svg,gif}")
     .pipe(gulp.dest("build/img"))
 }
 
@@ -82,6 +83,13 @@ const copyVideos = () => {
 }
 
 exports.videos = copyVideos;
+
+const copySounds = () => {
+  return gulp.src("source/sound/**/*.*")
+    .pipe(gulp.dest("build/sound"))
+}
+
+exports.sounds = copySounds;
 
 // WebP
 
@@ -168,6 +176,7 @@ const build = gulp.series(
   copy,
   optimizeImages,
   copyVideos,
+  copySounds,
   gulp.parallel(
     styles,
     html,
@@ -186,6 +195,7 @@ exports.default = gulp.series(
   copy,
   copyImages,
   copyVideos,
+  copySounds,
   gulp.parallel(
     styles,
     html,

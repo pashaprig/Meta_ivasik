@@ -19,63 +19,19 @@
 </head>
 
 <body class="page-body">
-  <header class="page-header container">
-    header
+  <header class="page-header">
+    <img class="page-header__img" src="img/img/logo.webp" width="83" height="17" alt="Meta loader">
   </header>
   <main>
-    <section class="promo">
-      <div class="promo__wrapper">
-        <h1 class="promo__heading heading">Получай дивиденды от <span>150&nbsp;000&nbsp;₸</span> в неделю</h1>
-        <p class="promo__about">Стань одним из первых инвесторов, приобретающих акции самого крупного банка в
-          Казахстане.</p>
-        <form action="#" class="form" method="POST" id="leadform1">
-          <input type="text" name="name" id="name" placeholder="Имя Фамилия">
-          <input type="email" name="email" id="email" placeholder="Эл. адрес">
-          <input type="tel" name="phone1" placeholder="" id="phone1" />
-          <input id="realPhone1" class="hidden-phone" type="hidden" name="phone" value="" />
-          <input type="hidden" name="currency" value="usd">
-          <input id="country1" type="hidden" name="country" value="ru">
-          <input type="hidden" name="comment" class="comment" value="">
-          <input type="hidden" name="campaign_name" value="">
-          <button class="btn submit_btn" type="submit">
-            <span>Отправить заявку</span>
-          </button>
-          <div class="form_message error inactive"
-            style="margin:15px 0;background-color: #ffd4d4;border: 2px dashed #ce0909;border-radius: 10px;padding: 20px;max-width: 350px;">
-          </div>
-        </form>
-      </div>
-
-      <div class="promo__wrapper  promo__wrapper--mw53">
-        <div class="promo__video-bcg">
-          <div class="promo__video">
-            <button type="button" id="button-play">
-              <svg width="38" height="44">
-                <use xlink:href="img/sprite.svg#play"></use>
-              </svg>
-            </button>
-            <div style="padding:56.25% 0 0 0;position:relative;">
-              <iframe
-                src="https://player.vimeo.com/video/833805934?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&loop=1&"
-                frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
-                style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Yandex_land">
-              </iframe>
-            </div>
-            <script src="https://player.vimeo.com/api/player.js"></script>
-          </div>
-        </div>
-      </div>
+    <section class="conversation">
+      conversation
     </section>
-
+    <section class="modal modal--1" aria-modal="modal1">
+      <h2 class="modal__header">Соединение с оператором Компании Meta</h2>
+      <img class="modal__loader" src="img/gif/loader.gif"  height="150"  alt="Meta loader">
+    </section>
   </main>
-
-  <footer class="page-footer container">
-    footer
-  </footer>
   <script src="js/script.js"></script>
-
-
-
 </body>
 
 </html>

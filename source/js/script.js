@@ -3,34 +3,32 @@ class App {
 
     this.afterVideoPlay();
     this.onButtonPlay();
+    this.modal1()
   }
 
   constructor() {
-    this.iframe = document.querySelector('iframe');
-    this.player = new Vimeo.Player(this.iframe);
-    this.btnPlay = document.querySelector('#button-play')
+
   }
 
-
-
   afterVideoPlay() {
-    const vidoWrapper = document.querySelector('.promo__video')
 
-    const onPlay = () => {
-      vidoWrapper.style.borderRadius = 'unset';
-      this.btnPlay.style.display = 'none'
-    };
-
-    this.player.on('play', onPlay);
   }
 
   onButtonPlay() {
-    const playVideo = () => {
-      this.player.play()
-      this.btnPlay.style.display = 'none'
-    }
 
-    this.btnPlay.addEventListener('click', playVideo);
+  }
+
+  modal1() {
+    const modal1 = document.querySelector('[aria-modal="modal1"]');
+    if (modal1) {
+      modal1.classList.remove('hidden', 'visually-hidden');
+      setTimeout(() => {
+        modal1.classList.add('hidden');
+      }, 1500);
+      setTimeout(() => {
+        modal1.classList.add('visually-hidden');
+      }, 2000);
+    }
   }
 }
 
