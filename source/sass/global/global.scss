@@ -47,21 +47,22 @@ button {
 }
 
 .btn {
-  box-sizing: border-box;
   display: flex;
-  align-items: center;
+  padding: 8px 40px;
   justify-content: center;
-  min-width: 250px;
-  padding: 10px;
+  align-items: center;
+  max-width: 200px;
+  border-radius: 30px;
+  background: linear-gradient(0deg, #0080fa 77.63%, #fff 110.36%);
+  box-shadow: 2.684px 2.684px 9.393px 0px #04325e;
   color: $basic-white;
-  font-family: "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
   border: none;
 
   &:hover {
-
   }
 
   &:active {

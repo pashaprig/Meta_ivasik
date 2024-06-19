@@ -19,16 +19,24 @@
 </head>
 
 <body class="page-body">
-  <header class="page-header">
-    <img class="page-header__img" src="img/img/logo.webp" width="83" height="17" alt="Meta loader">
-  </header>
+  <!-- <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/McJ_3hitEsw?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&loop=1&playlist=McJ_3hitEsw"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+  </iframe> -->
   <main>
     <section class="conversation">
-      conversation
+      <video class="conversation__video" aria-video="1" src="video/1.mp4" preload="auto" muted poster="img/img/operator.png"></video>
     </section>
-    <section class="modal modal--1" aria-modal="modal1">
+    <section class="modal" aria-modal="loader">
       <h2 class="modal__header">Соединение с оператором Компании Meta</h2>
-      <img class="modal__loader" src="img/gif/loader.gif"  height="150"  alt="Meta loader">
+      <img class="modal__loader" src="img/gif/loader.gif" height="150" alt="Meta loader">
+      <button class="btn visually-hidden" aria-sound="on" type="button">Начать чат</button>
+    </section>
+    <section class="modal modal--form visually-hidden" aria-modal="modal2">
+      <h2 class="modal__header">Пожалуйста, введите свое полное имя</h2>
+      <button class="btn " aria-next="next" type="button">Подтвердить</button>
     </section>
   </main>
   <script src="js/script.js"></script>

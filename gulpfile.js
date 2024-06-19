@@ -58,12 +58,11 @@ exports.scripts = scripts;
 // Images
 
 const optimizeImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg,gif}")
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.mozjpeg({ progressive: true }),
       imagemin.optipng({ optimizationLevel: 3 }),
-      imagemin.svgo(),
-      gifsicle({interlaced: true})
+      imagemin.svgo()
     ]))
     .pipe(gulp.dest("build/img"))
 }
@@ -71,7 +70,7 @@ const optimizeImages = () => {
 exports.optimizeImages = optimizeImages;
 
 const copyImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg,gif}")
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(gulp.dest("build/img"))
 }
 
@@ -83,13 +82,6 @@ const copyVideos = () => {
 }
 
 exports.videos = copyVideos;
-
-const copySounds = () => {
-  return gulp.src("source/sound/**/*.*")
-    .pipe(gulp.dest("build/sound"))
-}
-
-exports.sounds = copySounds;
 
 // WebP
 
@@ -121,6 +113,9 @@ const copy = (done) => {
     "source/fonts/**/*.{woff2,woff,ttf}",
     "source/*.ico",
     "source/img/**/*.svg",
+    "source/img/**/*.gif",
+    "source/sound/**/*.*",
+    "source/video/**/*.*",
     "!source/img/icons/*.svg",
     "source/*.webmanifest"
   ], {
@@ -176,7 +171,6 @@ const build = gulp.series(
   copy,
   optimizeImages,
   copyVideos,
-  copySounds,
   gulp.parallel(
     styles,
     html,
@@ -195,7 +189,6 @@ exports.default = gulp.series(
   copy,
   copyImages,
   copyVideos,
-  copySounds,
   gulp.parallel(
     styles,
     html,
