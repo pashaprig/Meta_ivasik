@@ -11,18 +11,6 @@
     5px -5px 10px 0px rgba(4, 36, 67, 0.25) inset,
     -5px 5px 9.3px 0px rgba(255, 255, 255, 0.25) inset;
 
-  label {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
-
-    &:last-of-type {
-      margin-bottom: unset;
-    }
-  }
-
   input {
     width: 90%;
     padding: 8px;
@@ -32,12 +20,35 @@
     border-radius: 30px;
     border: 1px solid $input-border;
     background: $input-bcg;
+
+    &.error {
+      color: $error;
+      border-color: $error;
+    }
+  }
+}
+
+.form__label-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+
+  label.error {
+    margin-top: -10px;
+    color: $error;
+  }
+
+  &:last-of-type {
+    margin-bottom: unset;
   }
 }
 
 .form__wrapper {
   box-sizing: border-box;
-  min-width: 250px;
+  min-width: 260px;
   margin-bottom: 20px;
   padding: 15px 30px;
   border-radius: 20px;

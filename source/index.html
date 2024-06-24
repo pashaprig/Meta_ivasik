@@ -27,8 +27,14 @@
   </iframe> -->
   <main>
     <section class="conversation">
-      <video class="conversation__video" aria-video="video-1" src="video/1sec.mp4" preload="auto" muted
-        poster="img/img/operator.png"></video>
+      <video class="conversation__video" aria-video="video-1" src="video/1sec.mp4" preload="auto" muted poster="img/img/operator.png"></video>
+      <video class="conversation__video visually-hidden" aria-video="video-2" src="video/1sec.mp4" preload="auto" muted poster="img/img/operator.png"></video>
+      <video class="conversation__video visually-hidden" aria-video="video-3a" src="video/1sec.mp4" preload="auto" muted poster="img/img/operator.png"></video>
+      <video class="conversation__video visually-hidden" aria-video="video-3b" src="video/1sec.mp4" preload="auto" muted poster="img/img/operator.png"></video>
+      <video class="conversation__video visually-hidden" aria-video="video-4" src="video/1sec.mp4" preload="auto" muted poster="img/img/operator.png"></video>
+      <video class="conversation__video visually-hidden" aria-video="video-5" src="video/1sec.mp4" preload="auto" muted poster="img/img/operator.png"></video>
+      <video class="conversation__video visually-hidden" aria-video="video-6" src="video/1sec.mp4" preload="auto" muted poster="img/img/operator.png"></video>
+      <video class="conversation__video visually-hidden" aria-video="video-7" src="video/1sec.mp4" preload="auto" muted poster="img/img/operator.png"></video>
     </section>
     <section class="modal" aria-modal="loader">
       <h2 class="modal__header">Соединение с оператором Компании Meta</h2>
@@ -39,15 +45,18 @@
       <form action="<?= $form; ?>" class="form" method="POST" id="leadform1">
         <h2 class="form__heading">Пожалуйста, введите свое полное имя</h2>
         <div class="form__wrapper">
-          <label class="visually-hidden" aria-input="firstname">
+          <label class="form__label-wrapper visually-hidden" aria-input="firstname">
             Ваше имя
             <input type="text" name="firstname">
           </label>
-          <label class="visually-hidden" aria-input="lastname">
+          <label class="form__label-wrapper visually-hidden" aria-input="lastname">
             Ваша фамилия
             <input type="text" name="lastname">
           </label>
-          <input class="visually-hidden" type="email" name="email" aria-input="email">
+          <label class="form__label-wrapper visually-hidden" aria-input="email">
+            Ваше имя
+            <input type="email" name="email">
+          </label>
           <input class="visually-hidden" type="tel" name="phone1" id="phone1" placeholder="">
           <input type="hidden" name="phone" id="realPhone1">
           <input type="hidden" name="currency" value="usd">
@@ -57,7 +66,7 @@
           <input type="hidden" name="name" id="name">
           <div class="form_message error inactive"></div>
         </div>
-        <button class="btn submit_btn" type="button">Подтвердить</button>
+        <button class="btn submit_btn" type="submit" step="0" aria-input="submitBtn">Подтвердить</button>
       </form>
     </section>
   </main>

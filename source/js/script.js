@@ -1,13 +1,28 @@
 class App {
   constructor() {
+    this.step = 0
+
     this.form = document.querySelector('[aria-modal="form"]')
+    this.inputs = this.form.querySelectorAll('input:not([type="hidden"])')
+
+    this.buttonSbm = this.form.querySelector('[aria-input="submitBtn"]')
+
     this.firstname = this.form.querySelector('[aria-input="firstname"]')
     this.lastname = this.form.querySelector('[aria-input="lastname"]')
     this.email = this.form.querySelector('[aria-input="email"]')
 
     this.loader = document.querySelector('[aria-modal="loader"]');
+
     this.videos = document.querySelectorAll('[aria-video*="video"]');
     this.video1 = document.querySelector('[aria-video="video-1"]');
+    this.video2 = document.querySelector('[aria-video="video-2"]');
+    this.video3a = document.querySelector('[aria-video="video-3a"]');
+    this.video3b = document.querySelector('[aria-video="video-3b"]');
+    this.video4 = document.querySelector('[aria-video="video-4"]');
+    this.video5 = document.querySelector('[aria-video="video-5"]');
+    this.video6 = document.querySelector('[aria-video="video-6"]');
+    this.video7 = document.querySelector('[aria-video="video-7"]');
+
     this.btnSoundOn = document.querySelector('[aria-sound="on"]')
     this.header = document.querySelector('.modal__header')
   }
@@ -15,10 +30,29 @@ class App {
   init() {
     this.validation();
     this.unmuteAllVideos();
-    this.modal1();
+    this.step0();
+    this.hendleNextBtnClick();
   }
 
+  setBtnColor(inputsWrapper) {
+    const inputs = inputsWrapper.map((iw) => iw.childNodes[1])
 
+    const toggleBtnDisabled = (button, shouldDisable) => {
+      button.disabled = shouldDisable;
+    };
+
+    inputs.forEach(input => {
+      input.addEventListener('keyup', () => {
+        const hasError = Array.from(inputs).some(input => input.classList.contains('error'));
+        toggleBtnDisabled(this.buttonSbm, hasError);
+      });
+
+      input.addEventListener('blur', () => {
+        const hasError = Array.from(inputs).some(input => input.classList.contains('error'));
+        toggleBtnDisabled(this.buttonSbm, hasError);
+      });
+    });
+  }
 
   unmuteAllVideos() {
     this.btnSoundOn.addEventListener('click', () => {
@@ -28,47 +62,101 @@ class App {
     })
   }
 
-  modal1() {
+  hendleNextBtnClick() {
+    const checkStep = (step) => {
+      switch (step) {
+        case 1:
+          console.log('Шаг 1');
+          this.step1()
+          break;
+        case 2:
+          console.log('Шаг 2');
+          break;
+        case 3:
+          console.log('Шаг 3');
+          break;
+        default:
+          console.log('Неизвестный шаг');
+          break;
+      }
+    }
 
+    this.buttonSbm.addEventListener('click', () => { checkStep(this.step) })
+  }
+
+
+  step0() {
+    this.setBtnColor([this.firstname, this.lastname]);
 
     setTimeout(() => {
       this.header.textContent = "Соединение успешно установлено";
-      this.btnSoundOn.classList.remove('visually-hidden')
+      this.show(this.btnSoundOn);
     }, 1500);
 
     this.btnSoundOn.addEventListener('click', () => {
       this.loader.classList.add('hidden');
 
-      //hide phone
-      const iti = this.form.querySelector('.iti')
-      iti.classList.add('visually-hidden')
+      // Скрыть телефон
+      const iti = this.form.querySelector('.iti');
+      this.hide(iti);
 
-      this.#play(this.video1);
-      this.#afterVideoEnd(this.video1, [this.form, this.firstname, this.lastname], [this.video1]);
+      this.play(this.video1);
+      this.afterVideoEnd(this.video1, [this.video1], [this.form, this.firstname, this.lastname]);
 
       setTimeout(() => {
-        this.loader.classList.add('visually-hidden');
+        this.hide(this.loader);
       }, 500);
+
+      this.step = 1;
+      this.buttonSbm.setAttribute('step', this.step);
     });
   }
 
-  #play(video) {
+  step1() {
+    const inputs = [this.firstname, this.lastname].map((iw) => iw.childNodes[1])
+
+    if (inputs.some(input => !input.value)) {
+      setTimeout(() => {
+        this.buttonSbm.disabled = true;
+      }, 0);
+
+    } else {
+
+
+      this.hide(this.form)
+      this.show(this.video2)
+      this.play(this.video2);
+      this.afterVideoEnd(this.video2, [this.video2,], [this.form, this.firstname, this.lastname]);
+
+      this.step = 2
+      this.buttonSbm.setAttribute('step', this.step)
+    }
+  }
+
+  hide(el) {
+    el.classList.add('visually-hidden')
+  }
+
+  show(el) {
+    el.classList.remove('visually-hidden')
+  }
+
+  play(video) {
     video.play();
   }
 
-  #afterVideoEnd(video, toShow = [], toHide = []) {
-    video.addEventListener('ended', function () {
-
+  afterVideoEnd(video, toHide = [], toShow = []) {
+    video.addEventListener('ended', () => {
       if (toHide.length) {
         toHide.forEach((el) => {
-          el.classList.add('visually-hidden')
-        })
+          this.hide(el);
+        });
       }
 
       if (toShow.length) {
         toShow.forEach((el) => {
-          el.classList.remove('visually-hidden')
-        })
+          this.show(el);
+        });
       }
     });
   }
@@ -126,7 +214,7 @@ class App {
       function (value, element) {
         return this.optional(element) || /^[a-zA-Zа-яА-ЯЁё\s]+$/.test(value.replace(/ +/g, ' ').trim());
       },
-      "Имя может содержать только буквы!"
+      "Введите правильное имя"
     );
 
     $.validator.addMethod(
@@ -134,7 +222,7 @@ class App {
       function (value, element) {
         return this.optional(element) || /^[a-zA-Zа-яА-ЯЁё\s]+$/.test(value.replace(/ +/g, ' ').trim());
       },
-      "Фамилия может содержать только буквы!"
+      "Введите правильную фамилию"
     );
 
 
@@ -182,19 +270,24 @@ class App {
       },
       messages: {
         phone1: {
-          required: "Это поле обязательное",
+          required: "Заполните это поле",
         },
         firstname: {
-          required: "Это поле обязательное",
+          required: "Заполните это поле",
         },
         lastname: {
-          required: "Это поле обязательное",
+          required: "Заполните это поле",
         },
         email: {
-          required: "Это поле обязательное"
+          required: "Заполните это поле"
         },
       },
       submitHandler: function (form, event) {
+        if ($('.submit_btn').attr('step') !== '7') {
+          event.preventDefault();
+          return;
+        }
+
         $("#name").val($("#firstName").val() + " " + $("#lastName").val());
         sendAjaxForm(form);
         return false;
