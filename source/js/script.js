@@ -495,7 +495,7 @@ class App {
             if (typeof sendAnalytics !== "undefined") sendAnalytics();
             $(form).find(".submit_btn").html("Перейти на сайт");
             $(form).find(".submit_btn").on("click", function(event) {
-              window.location.href = "https://google.com";
+              window.location.href = '?end=page';
             });
             if (response.url) {
               setTimeout(function () {

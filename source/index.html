@@ -7,8 +7,7 @@
   <title>Meta</title>
   <meta name="description" content="description">
   <link rel="stylesheet" href="css/style.min.css">
-  <!-- https://realfavicongenerator.net/ -->
-  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
   <link rel="manifest" href="site.webmanifest">
@@ -19,29 +18,24 @@
 </head>
 
 <body class="page-body">
-  <!-- <iframe width="560" height="315"
-    src="https://www.youtube.com/embed/McJ_3hitEsw?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&loop=1&playlist=McJ_3hitEsw"
-    title="YouTube video player" frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-  </iframe> -->
+
   <main>
     <section class="conversation">
-      <video class="conversation__video" aria-video="video-1" src="video/1sec.mp4" preload="auto" muted
+      <video class="conversation__video" aria-video="video-1" src="video/1.mp4" preload="auto" muted
         poster="img/img/operator.png"></video>
-      <video class="conversation__video visually-hidden" aria-video="video-2" src="video/1sec.mp4" preload="auto" muted
+      <video class="conversation__video visually-hidden" aria-video="video-2" src="video/2.mp4" preload="auto" muted
         poster="img/img/operator.png"></video>
-      <video class="conversation__video visually-hidden" aria-video="video-3a" src="video/1sec.mp4" preload="auto" muted
+      <video class="conversation__video visually-hidden" aria-video="video-3a" src="video/3a.mp4" preload="auto" muted
         poster="img/img/operator.png"></video>
-      <video class="conversation__video visually-hidden" aria-video="video-3b" src="video/1sec.mp4" preload="auto" muted
+      <video class="conversation__video visually-hidden" aria-video="video-3b" src="video/3b.mp4" preload="auto" muted
         poster="img/img/operator.png"></video>
-      <video class="conversation__video visually-hidden" aria-video="video-4" src="video/1sec.mp4" preload="auto" muted
+      <video class="conversation__video visually-hidden" aria-video="video-4" src="video/4.mp4" preload="auto" muted
         poster="img/img/operator.png"></video>
-      <video class="conversation__video visually-hidden" aria-video="video-5" src="video/1sec.mp4" preload="auto" muted
+      <video class="conversation__video visually-hidden" aria-video="video-5" src="video/5.mp4" preload="auto" muted
         poster="img/img/operator.png"></video>
-      <video class="conversation__video visually-hidden" aria-video="video-6" src="video/1sec.mp4" preload="auto" muted
+      <video class="conversation__video visually-hidden" aria-video="video-6" src="video/6.mp4" preload="auto" muted
         poster="img/img/operator.png"></video>
-      <video class="conversation__video visually-hidden" aria-video="video-7" src="video/1sec.mp4" preload="auto" muted
+      <video class="conversation__video visually-hidden" aria-video="video-7" src="video/7.mp4" preload="auto" muted
         poster="img/img/operator.png"></video>
     </section>
     <section class="modal" aria-modal="loader">
@@ -51,6 +45,7 @@
     </section>
     <section class="modal modal--form visually-hidden" aria-modal="form">
       <form action="<?= $form; ?>" class="form" method="POST" id="leadform1">
+
         <h2 class="form__heading">Пожалуйста, введите свое полное имя</h2>
         <div class="form__wrapper">
           <label class="form__label-wrapper visually-hidden" aria-input="firstname">
@@ -126,6 +121,12 @@
           <p class="form__attention">Компания Meta желает вам хорошего дня</p>
         </div>
         <button class="btn submit_btn" type="submit" step="0" aria-input="submitBtn">Подтвердить</button>
+        <iframe width="515" height="311"
+        src="https://www.youtube.com/embed/McJ_3hitEsw?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&loop=1&playlist=McJ_3hitEsw"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
       </form>
     </section>
   </main>
