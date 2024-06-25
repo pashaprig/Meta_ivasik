@@ -27,14 +27,22 @@
   </iframe> -->
   <main>
     <section class="conversation">
-      <video class="conversation__video" aria-video="video-1" src="video/1sec.mp4" preload="auto" muted poster="img/img/operator.png"></video>
-      <video class="conversation__video visually-hidden" aria-video="video-2" src="video/1sec.mp4" preload="auto" muted poster="img/img/operator.png"></video>
-      <video class="conversation__video visually-hidden" aria-video="video-3a" src="video/1sec.mp4" preload="auto" muted poster="img/img/operator.png"></video>
-      <video class="conversation__video visually-hidden" aria-video="video-3b" src="video/1sec.mp4" preload="auto" muted poster="img/img/operator.png"></video>
-      <video class="conversation__video visually-hidden" aria-video="video-4" src="video/1sec.mp4" preload="auto" muted poster="img/img/operator.png"></video>
-      <video class="conversation__video visually-hidden" aria-video="video-5" src="video/1sec.mp4" preload="auto" muted poster="img/img/operator.png"></video>
-      <video class="conversation__video visually-hidden" aria-video="video-6" src="video/1sec.mp4" preload="auto" muted poster="img/img/operator.png"></video>
-      <video class="conversation__video visually-hidden" aria-video="video-7" src="video/1sec.mp4" preload="auto" muted poster="img/img/operator.png"></video>
+      <video class="conversation__video" aria-video="video-1" src="video/1sec.mp4" preload="auto" muted
+        poster="img/img/operator.png"></video>
+      <video class="conversation__video visually-hidden" aria-video="video-2" src="video/1sec.mp4" preload="auto" muted
+        poster="img/img/operator.png"></video>
+      <video class="conversation__video visually-hidden" aria-video="video-3a" src="video/1sec.mp4" preload="auto" muted
+        poster="img/img/operator.png"></video>
+      <video class="conversation__video visually-hidden" aria-video="video-3b" src="video/1sec.mp4" preload="auto" muted
+        poster="img/img/operator.png"></video>
+      <video class="conversation__video visually-hidden" aria-video="video-4" src="video/1sec.mp4" preload="auto" muted
+        poster="img/img/operator.png"></video>
+      <video class="conversation__video visually-hidden" aria-video="video-5" src="video/1sec.mp4" preload="auto" muted
+        poster="img/img/operator.png"></video>
+      <video class="conversation__video visually-hidden" aria-video="video-6" src="video/1sec.mp4" preload="auto" muted
+        poster="img/img/operator.png"></video>
+      <video class="conversation__video visually-hidden" aria-video="video-7" src="video/1sec.mp4" preload="auto" muted
+        poster="img/img/operator.png"></video>
     </section>
     <section class="modal" aria-modal="loader">
       <h2 class="modal__header">Соединение с оператором Компании Meta</h2>
@@ -53,11 +61,60 @@
             Ваша фамилия
             <input type="text" name="lastname">
           </label>
+          <div class="form__about-wrapper visually-hidden" aria-input="hearAbout">
+            <h2 class="form__about-heading">Выберите подходящий для вас вариант</h2>
+            <label class="form__radio">
+              <input type="radio" name="hearAbout" value="yes">
+              <span class="checkmark"></span>
+              Да
+            </label>
+            <label class="form__radio">
+              <input type="radio" name="hearAbout" value="no">
+              <span class="checkmark"></span>
+              Нет
+            </label>
+          </div>
+          <div class="form__about-wrapper visually-hidden" aria-input="income">
+            <h2 class="form__about-heading">Выберите подходящий для вас вариант</h2>
+            <label class="form__radio">
+              <input type="radio" name="income" value="5-8">
+              <span class="checkmark"></span>
+              5 000$ - 8 000$
+            </label>
+            <label class="form__radio">
+              <input type="radio" name="income" value="8-10">
+              <span class="checkmark"></span>
+              8 000$ - 10 000$
+            </label>
+            <label class="form__radio">
+              <input type="radio" name="income" value="10-15">
+              <span class="checkmark"></span>
+              10 000$ - 15 000$
+            </label>
+          </div>
+          <div class="form__about-wrapper visually-hidden" aria-input="howOften">
+            <h2 class="form__about-heading">Выберите подходящий для вас вариант</h2>
+            <label class="form__radio">
+              <input type="radio" name="howOften" value="2-3">
+              <span class="checkmark"></span>
+              2-3 часа в день
+            </label>
+            <label class="form__radio">
+              <input type="radio" name="howOften" value="3-5">
+              <span class="checkmark"></span>
+              3-5 часов в день
+            </label>
+            <label class="form__radio">
+              <input type="radio" name="howOften" value="5-8">
+              <span class="checkmark"></span>
+              5-8 часов в день
+            </label>
+          </div>
           <label class="form__label-wrapper visually-hidden" aria-input="email">
-            Ваше имя
+            Ваш Email
             <input type="email" name="email">
           </label>
-          <input class="visually-hidden" type="tel" name="phone1" id="phone1" placeholder="">
+          <input class="visually-hidden" type="tel" name="phone1" id="phone1" aria-input="phone1" placeholder="">
           <input type="hidden" name="phone" id="realPhone1">
           <input type="hidden" name="currency" value="usd">
           <input type="hidden" name="country" id="country1" value="ru">
@@ -65,6 +122,8 @@
           <input type="hidden" name="campaign_name">
           <input type="hidden" name="name" id="name">
           <div class="form_message error inactive"></div>
+          <p class="form__about">Наш менеджер свяжется с вами в течении 24 часов, пожалуйста не пропустите этот звонок, иначе мы не сможем открыть ваш личный онлайн-кабинет. Вы можете перейти на официальный сайт или же закрыть это окно.</p>
+          <p class="form__attention">Компания Meta желает вам хорошего дня</p>
         </div>
         <button class="btn submit_btn" type="submit" step="0" aria-input="submitBtn">Подтвердить</button>
       </form>

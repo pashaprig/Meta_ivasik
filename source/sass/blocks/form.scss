@@ -15,7 +15,6 @@
     width: 90%;
     padding: 8px;
     font-family: "Montserrat", "Arial", sans-serif;
-    font-size: 10px;
     font-weight: 300;
     border-radius: 30px;
     border: 1px solid $input-border;
@@ -24,6 +23,46 @@
     &.error {
       color: $error;
       border-color: $error;
+    }
+  }
+
+  label.error {
+    color: $error;
+  }
+
+  .form__about {
+    display: none;
+  }
+
+  .form__attention {
+    display: none;
+  }
+
+  &.final {
+    text-align: center;
+    color: $basic-white;
+    background:
+      linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
+      url("../img/bcg/form-bcg.webp") lightgray 50% / cover no-repeat;
+
+    .form__wrapper {
+      background: transparent;
+    }
+
+    .form__about {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form__attention {
+      display: block;
+      margin-bottom: 30px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .form_message {
+      display: none;
     }
   }
 }
@@ -67,4 +106,59 @@
 
 .submit_btn {
   width: 100%;
+}
+
+.form__about-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.form__about-heading {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+input[type="radio"] {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+  cursor: pointer;
+}
+
+.form__radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 31px;
+  padding-left: 35px;
+  border-radius: 30px;
+  border: 1px solid $input-border;
+  background: $input-bcg;
+  cursor: pointer;
+}
+
+.form__radio .checkmark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 14px;
+  height: 7.5px;
+  width: 7.5px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.form__radio input:checked ~ .checkmark {
+  background-color: $success;
+}
+
+.form__radio input:checked ~ .checkmark:after {
+  display: block;
 }

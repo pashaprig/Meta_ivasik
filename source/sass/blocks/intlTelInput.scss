@@ -35,8 +35,8 @@
   position: relative;
   bottom: 1px;
   display: flex;
+  height: 34px;
   align-items: center;
-  height: 40px;
   padding: 0 6px 0 8px;
 }
 .iti__arrow {
@@ -118,6 +118,7 @@
   padding-right: 6px;
   padding-left: 52px;
   margin-left: 0;
+  width: 100%;
 }
 .iti--allow-dropdown .iti__flag-container,
 .iti--separate-dial-code .iti__flag-container {
@@ -136,20 +137,20 @@
   background-color: transparent;
 }
 .iti--separate-dial-code .iti__selected-flag {
-  font-size: 15px;
-  font-weight: 400;
-  color: #fff;
+  font-size: 12px;
+  font-weight: 300;
 }
 .iti--separate-dial-code .iti__selected-flag::after {
   content: "|";
   margin-left: 5px;
-  font-size: 25px;
+  margin-bottom: 3px;
+  font-size: 15px;
 }
 .iti--separate-dial-code .iti__selected-dial-code {
   margin-left: 6px;
-  font-family: "Inter", "Arial", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
 }
 .iti--container {
   position: absolute;
